@@ -35,9 +35,9 @@ class Helpers
     public function canUploadImages($user){
         // Si es usuario puede subir 10 al día si el usuario es null solo 3
         if ($user) {
-            return $this->countTodayUploads($user) < 100;
+            return $this->countTodayUploads($user) < 10;
         } else {
-            return $this->countTodayUploads($user) < 300;
+            return $this->countTodayUploads($user) < 3;
         }
     }
 }

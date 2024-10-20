@@ -21,7 +21,11 @@
                     <a href="{{route('legal.licencias')}}" class="hover:underline me-4 md:me-6">Licencia</a>
                 </li>
                 <li>
-                    <a href="https://github.com/dovaldev" class="hover:underline">Github</a>
+                    <a href="https://github.com/dovaldev" class="hover:underline me-4 md:me-6"">Github</a>
+                </li>
+
+                <li>
+                    <a href="https://github.com/dovaldev/laravel-cloudinary-hackathon" class="hover:underline">Repositorio Github</a>
                 </li>
             </ul>
         </div>
