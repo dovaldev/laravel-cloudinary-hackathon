@@ -22,6 +22,12 @@ class SocialiteController extends Controller
         $googleUser = null;
         try {
             $googleUser = Socialite::driver('google')->user();
+            dd($googleUser);
+
+            if (!$googleUser) {
+                Log::error('Error al obtener el usuario de Google: Respuesta vacía.');
+                return redirect('/login')->withErrors('Error al obtener datos de Google.');
+            }
 
             Log::info('Google User: ' . json_encode($googleUser));
 
