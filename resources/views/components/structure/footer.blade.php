@@ -7,7 +7,7 @@
                 <x-application-logo class="h-8" />
                 <div class="flex justify-center items-center">
                     <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">PROFILE</span>
-                    <span class="self-center text-2xl font-semibold whitespace-nowrap  text-primary">IA</span>
+                    <span class="self-center text-2xl font-semibold whitespace-nowrap  text-primary">AI</span>
                 </div>
             </a>
             <ul class="flex flex-wrap items-center mt-4 md:mt-0 mb-6 text-sm font-medium text-gray-200 sm:mb-0 d">

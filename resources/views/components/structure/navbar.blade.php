@@ -5,7 +5,7 @@
                 <x-application-logo class="h-8" />
                 <div class="flex justify-center items-center">
                     <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">PROFILE</span>
-                    <span class="self-center text-2xl font-semibold whitespace-nowrap  text-primary">IA</span>
+                    <span class="self-center text-2xl font-semibold whitespace-nowrap  text-primary">AI</span>
                 </div>
             </a>
             @if (Route::has('login'))

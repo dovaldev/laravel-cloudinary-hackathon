@@ -1,5 +1,5 @@
 @section('seo')
-    <x-tools.seo title="profileIA.top - Crea Imagenes Spoky para Halloween"
+    <x-tools.seo title="profileAI.top - Crea Imagenes Spoky para Halloween"
         description="Crea imagenes Spoky para Halloween con profileAI.top. Sube tus imagenes y transformalas con la IA Generativa de Cloudinary."
         robots="noindex, nofollow" />
 @endsection

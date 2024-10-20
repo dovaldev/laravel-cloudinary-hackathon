@@ -1,5 +1,5 @@
 @section('seo')
-    <x-tools.seo title="profileIA.top - Precios para todos los bolsillos"
+    <x-tools.seo title="profileAI.top - Precios para todos los bolsillos"
         description="¡Precios tan buenos que te reirás! Aquí en profileAI.top, ofrecemos opciones que se adaptan a tu cartera (mientras quede cash, claro)."
         robots="noindex, nofollow" />
 @endsection
