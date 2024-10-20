@@ -24,10 +24,10 @@ new class extends Component {
     public $theme = '';
 
     #[Rule('required')]
-    public $format = '';
+    public $format = 'none-format';
 
     #[Rule('required')]
-    public $filter = '';
+    public $filter = 'none-filter';
 
     public $preview;
 
@@ -162,8 +162,6 @@ new class extends Component {
 
 <div class="w-full max-w-5xl mx-auto">
     <form wire:submit="handleSubmit" class="grid grid-cols-12 w-full">
-
-
         <!-- selectores de imagen -->
         <div class="col-span-4 h-full max-h-[700px] overflow-y-scroll overflow-hidden gap-2 dark-scrollbar">
             <!-- Theme selector Background -->
@@ -174,8 +172,8 @@ new class extends Component {
                         <label class="image-option select-none w-20 flex flex-col items-center cursor-pointer">
                             <input type="radio" name="theme" value="{{ $theme['value'] }}" wire:model="theme"
                                 required />
-                            <img src="{{ $theme['image'] }}" alt={{ $theme['label'] }} class="size-16"
-                                draggable="false" />
+                            <img src="{{ $theme['image'] }}" alt="{{ $theme['label'] }}" class="size-16"
+                                draggable="false" title="Crear imagen con {{$theme['label']}}" />
                             <span class="text-white w-full text-center">{{ $theme['label'] }}</span>
                         </label>
                     @endforeach
@@ -192,12 +190,12 @@ new class extends Component {
             <section>
                 <h2 class="text-left w-full text-sm mb-4">Cambiar formato de la imagen</h2>
                 <div class="flex flex-wrap gap-4 justify-start">
-                    @foreach ($formats as $format)
+                    @foreach ($formats as $index => $format)
                         <label class="image-option select-none w-20 flex flex-col items-center cursor-pointer">
                             <input type="radio" name="format" value="{{ $format['value'] }}" wire:model="format"
                                 required />
                             <img src="{{ $format['image'] }}" alt="{{ $format['label'] }}" class="size-16"
-                                draggable="false" />
+                                draggable="false" title="Crear imagen con {{$theme['label']}}" />
                             <span class="text-white w-full text-center">{{ $format['label'] }}</span>
                         </label>
                     @endforeach
@@ -212,12 +210,12 @@ new class extends Component {
             <section>
                 <h2 class="text-left w-full text-sm mb-4">Cambiar Filtro de la imagen</h2>
                 <div class="flex flex-wrap gap-4 justify-start">
-                    @foreach ($filters as $filter)
+                    @foreach ($filters as $index => $filter)
                         <label class="image-option select-none w-20 flex flex-col items-center cursor-pointer">
                             <input type="radio" name="filter" value="{{ $filter['value'] }}" wire:model="filter"
                                 required />
                             <img src="{{ $filter['image'] }}" alt="{{ $filter['label'] }}" class="size-16"
-                                draggable="false" />
+                                draggable="false" title="Crear imagen con {{$theme['label']}}" />
                             <span class="text-white w-full text-center">{{ $filter['label'] }}</span>
                         </label>
                     @endforeach
@@ -248,7 +246,7 @@ new class extends Component {
                             </svg>
                         @endif
                         <div class="flex text-sm text-gray-600 items-center justify-center w-full">
-                            <label for="image-upload"
+                            <label for="image-upload" title="Cargar imagen"
                                 class="relative cursor-pointer bg-gray-700 px-4 py-2 rounded-full font-medium text-primary hover:text-primary-ligth focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-primary">
                                 <span>Cargar imagen</span>
                                 <input id="image-upload" wire:model="image" type="file" accept="image/*"

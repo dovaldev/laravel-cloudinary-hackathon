@@ -30,8 +30,7 @@ class SocialiteController extends Controller
                 Auth::login($user);
             } else {
                 // Si no existe, lo crea
-
-                /**$profile_photo_path = $googleUser->avatar;
+                $profile_photo_path = $googleUser->avatar;
 
                 // Usamos cURL para descargar la imagen
                 $ch = curl_init($profile_photo_path);
@@ -48,7 +47,7 @@ class SocialiteController extends Controller
                     $path = 'profile-photos/' . $name;
                 } else {
                     $path = null; // Si no se pudo descargar la imagen
-                }*/
+                }
 
                 // Crear el usuario en la base de datos
                 $user = User::create([
@@ -56,7 +55,7 @@ class SocialiteController extends Controller
                     'email' => $googleUser->email,
                     'google_id' => $googleUser->id,
                     'email_verified_at' => now(),
-                    //'profile_photo_path' => $path ?? null,
+                    'profile_photo_path' => $path ?? null,
                     'password' => bcrypt(Str::random(16)) // Contraseña aleatoria
                 ]);
 
@@ -67,7 +66,9 @@ class SocialiteController extends Controller
 
         } catch (\Exception $e) {
             Log::error('Error al iniciar sesión con Google: ' . $e->getMessage());
-            return redirect('/login')->withErrors('Error al iniciar sesión con Google.');
+            if (!$googleUser) {
+                return redirect('/login')->withErrors('No se pudo obtener los datos de Google.');
+            }
         }
     }
 }
