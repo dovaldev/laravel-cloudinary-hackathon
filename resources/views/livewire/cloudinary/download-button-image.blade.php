@@ -6,13 +6,22 @@ new class extends Component {
     public $image_url;
     public $button_text = 'Descargar Imagen';
 
-
     public function download()
     {
-        // reemplazar todos los espacios por un formato de url
+        // Reemplazar todos los espacios por el formato de URL
         $url = str_replace(' ', '%20', $this->image_url);
+
+        // Usar cURL para obtener el contenido del archivo
         return response()->streamDownload(function () use ($url) {
-            echo file_get_contents($url);
+            $ch = curl_init();
+            curl_setopt($ch, CURLOPT_URL, $url);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); // Retorna el resultado como una cadena
+            curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true); // Sigue redirecciones
+            $output = curl_exec($ch);
+            curl_close($ch);
+
+            // Mostrar el contenido obtenido
+            echo $output;
         }, basename($url));
     }
 };
