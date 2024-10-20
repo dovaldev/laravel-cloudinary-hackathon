@@ -1,67 +1,105 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+ProfileAI.TOP 🎨✨
+=================
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+**ProfileAI.TOP** es una aplicación que utiliza el poder de la inteligencia artificial de Cloudinary para transformar tus imágenes de una manera increíble. ¡Cambia el fondo, la ropa, aplica filtros y ajusta el tamaño a tu gusto en solo unos clics! 🎃👻
 
-## About Laravel
+Este proyecto ha sido desarrollado como parte de la [Cloudinary CloudCreate Spooky AI Hackathon](https://cloudinary.com/blog/cloudinary-cloudcreate-spooky-ai-hackathon) organizada por [midudev](https://x.com/midudev).
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Características principales 🛠️
+-------------------------------
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+*   **Cambiar el fondo**: Transforma tus fotos con fondos temáticos como fantasmas, calabazas, brujas, murciélagos y más.
+*   **Cambiar atuendos**: ¡Convierte a las personas en vampiros, hombres lobo o incluso calabazas con solo un clic!
+*   **Filtros especiales**: Dale un toque artístico con filtros en blanco y negro, sepia o un efecto brillante fantasmagórico.
+*   **Redimensionar imágenes**: Elige entre formato vertical, horizontal, cuadrado o 3:4.
+*   **Galería personalizada**: Regístrate y guarda tus imágenes transformadas en tu galería personal.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Tecnologías utilizadas 💻
+-------------------------
 
-## Learning Laravel
+*   **Backend**: Laravel + Blade
+*   **Autenticación**: Laravel Socialite para Google
+*   **Procesamiento de imágenes**: Cloudinary API
+*   **Frontend**: Blade templating y estilos personalizados
+*   **Generación de imágenes**: Efectos y transformaciones utilizando Cloudinary AI
+*   **Contenedores**: Laravel Sail y Docker
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Cómo funciona ⚙️
+----------------
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+1.  **Sube tu imagen**: Selecciona una imagen desde tu dispositivo.
+2.  **Elige tus transformaciones**:
+    *   **Fondos temáticos**: Desde un bosque embrujado con hombres lobo hasta una noche con murciélagos volando.
+    *   **Atuendos espeluznantes**: Viste a tus personajes con trajes de Halloween, como zombies, vampiros o arañas.
+    *   **Filtros**: Aplica blanco y negro, sepia, o un brillo fantasmal.
+3.  **Ajusta el tamaño**: Selecciona el formato adecuado para tu imagen.
+4.  **Descarga y guarda**: Descarga tu imagen transformada o guárdala en tu galería personal.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Capturas de pantalla 🖼️
+------------------------
+![Portada de ProfileAI](public/images/profileai-top-og.webp)
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Registro e inicio de sesión 🔐
+------------------------------
 
-### Premium Partners
+Los usuarios pueden registrarse y acceder a su galería personalizada donde se almacenarán todas sus imágenes transformadas.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+> **Nota**: Actualmente, el inicio de sesión con Google no está funcionando en producción. Estamos trabajando para solucionarlo.
 
-## Contributing
+Instalación 🚀
+--------------
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Este proyecto utiliza [Laravel Sail](https://laravel.com/docs/9.x/sail) y Docker para un entorno de desarrollo sencillo. Sigue estos pasos para instalarlo:
 
-## Code of Conduct
+1.  Clona el repositorio:
+    
+    bash
+    
+    Copiar código
+    
+    `git clone https://github.com/dovaldev/laravel-cloudinary-hackathon.git cd laravel-cloudinary-hackathon`
+    
+2.  Copia el archivo `.env.example` y renómbralo a `.env`. Configura tus credenciales de Cloudinary y la base de datos.
+    
+    bash
+    
+    Copiar código
+    
+    `cp .env.example .env`
+    
+3.  Instala las dependencias:
+    
+    bash
+    
+    Copiar código
+    
+    `./vendor/bin/sail composer install ./vendor/bin/sail npm install`
+    
+4.  Levanta los contenedores de Docker:
+    
+    bash
+    
+    Copiar código
+    
+    `./vendor/bin/sail up -d`
+    
+5.  Ejecuta las migraciones y semillas:
+    
+    bash
+    
+    Copiar código
+    
+    `./vendor/bin/sail artisan migrate --seed`
+    
+6.  Accede al sitio en tu navegador en `http://localhost`.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Cómo contribuir 👥
+------------------
 
-## Security Vulnerabilities
+Las contribuciones son bienvenidas. Si tienes ideas para nuevas características, mejoras en el diseño o quieres arreglar algún bug, no dudes en hacer un fork del proyecto y enviar tu Pull Request.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Licencia 📜
+-----------
 
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-# laravel-cloudinary-hackathon
+Este proyecto está licenciado bajo la MIT License.

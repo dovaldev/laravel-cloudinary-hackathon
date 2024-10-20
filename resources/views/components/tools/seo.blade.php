@@ -2,15 +2,15 @@
 @php
     $url = url()->current();
     $baseUrl = url('/');
-    $siteTwitter = '@enlace.top';
+    $siteTwitter = '@dovaldev';
 @endphp
 @props([
-    'title' => 'enlace.TOP - El mejor acortador de enlaces',
-    'description' => 'Acorta tus enlaces de forma rápida y sencilla. Comparte tus URLs personalizadas cortas y de la forma más simple. Temporales y con contraseña.',
+    'title' => 'Crea imagenes para tus redes sociales con profileAI.TOP',
+    'description' => 'Crea imagenes para tus redes sociales con profileAI.TOP, usando la tecnología de IA Generativa de Cloudinary.',
     'robots' => 'index, follow',
-    'ogImage' => '/images/og/og-image-enlace.webp',
-    'twImage' => '/images/og/og-image-enlace.webp',
-    'twImageAlt' => 'Acortador de enlaces enlace.top',
+    'ogImage' => '/images/profileai-top-og.webp',
+    'twImage' => '/images/profileai-top-og.webp',
+    'twImageAlt' => 'Crea imagenes para tus redes sociales con profileAI.TOP',
     'urlCanonical' => ''
 ])
 
