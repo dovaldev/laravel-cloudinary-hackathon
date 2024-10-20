@@ -64,7 +64,6 @@ new class extends Component {
         // validar los campos
         $this->validate();
 
-        //dd($this->theme, $this->format, $this->filter);
         // cargar los helpers
         $helpers = new Helpers();
 
@@ -99,24 +98,6 @@ new class extends Component {
             ]);
         }
 
-        // si la transformación de format no es la original, cambiar el formato de la imagen
-
-        /**$imgtag = (new ImageTag($uploadedFile->getSecurePath()))
-            ->resize(Resize::pad()
-                ->width(400)
-                ->height(400)
-                ->background(Background::predominant())
-            );*/
-
-        //dd($uploadedFile->getSecurePath());
-        /**$imgtag =(new ImageTag($uploadedFile->getPublicId()))
-            //->addTransformation('gen_background_replace:prompt_Minimalist background with a cats');
-            ->addTransformation('c_scale,w_400/e_cartoonify');*/
-        //dd($imgtag);
-
-        // url de la imagen final
-        //$img = cloudinary()->getUrl($uploadedFile->getPublicId());
-
         // Obtener la URL segura de la imagen desde el objeto de respuesta de Cloudinary
         $secureUrl = $uploadedFile->getSecurePath();
 
@@ -132,7 +113,6 @@ new class extends Component {
         $prompt_theme = $theme ? $theme['prompt'] . ' ' . $this->text : '';
         $prompt_format = $format ? $format['prompt'] : '';
 
-        //dd($prompt_effect, $prompt_theme, $prompt_format, $this->filter, $this->theme, $this->format);
 
         // Agregar los efectos válidos a un array
         $transformations = [];
@@ -158,12 +138,6 @@ new class extends Component {
         // Limpiar comas repetidas, eliminar /, ,/ o ,,
         $transformedUrl = str_replace([',,', '/,', ',/', ' ,/', '/ ,'], [',', '/', '/', '/', '/'], $transformedUrl);
 
-        //dd($secureUrl, $publicId, $transformedUrl);
-
-        // transformar imagen de cloudinary por url con efecto de generar fondo de gatos con ia
-        // ejemplo: https://res.cloudinary.com/prod/image/upload/e_gen_background_replace:prompt_Clean white marble countertop/me/gen-bgr-food-4
-        // la url que quiero cambiar: https://res.cloudinary.com/portfolioai/image/upload/v1729119363/portfolio_ai/premium_photo-1664298810916-b0a26ce7d5e3.jpg
-        // la url transformada  final: https://res.cloudinary.com/portfolioai/image/upload/e_gen_background_replace:prompt_Clean%20white%20marble%20countertop/v1729119363/portfolio_ai/premium_photo-1664298810916-b0a26ce7d5e3.jpg
 
         // Ahora puedes crear el registro en la base de datos usando los datos obtenidos de la subida
         $cloudinaryImage = CloudinaryImage::create([

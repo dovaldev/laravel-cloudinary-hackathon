@@ -22,7 +22,6 @@ new class extends Component {
             $this->dispatch('retry-image-load');
         } else {
             $this->is_loading = false;
-            // Opcional: Aquí podrías mostrar un mensaje de error al usuario.
         }
     }
 };
