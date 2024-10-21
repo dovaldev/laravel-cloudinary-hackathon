@@ -99,13 +99,13 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#"
+                        <a href="https://x.com/dovaldev" target="_blank"
                             class="block py-2 px-3 text-white rounded hover:bg-gray-600 md:hover:bg-transparent md:hover:text-primary md:p-2">
                             Contacto
                         </a>
                     </li>
                     <li>
-                        <a href="#"
+                        <a href="https://dovaldev.com" target="_blank"
                             class="block py-2 px-3 text-white rounded hover:bg-gray-600 md:hover:bg-transparent md:hover:text-primary md:p-2">
                             Sobre mi
                         </a>
