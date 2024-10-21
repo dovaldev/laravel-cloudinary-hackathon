@@ -15,7 +15,7 @@ use App\Tools\ImagePrompts;
 new class extends Component {
     use WithFileUploads; // 1MB Max
 
-    #[Rule('image|max:1024')]
+    #[Rule('image|max:5024')]
     public $image;
 
     public $text = '';
