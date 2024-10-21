@@ -44,7 +44,7 @@
                 <span class="text-white font-semibold text-lg text-center md:text-left mt-2 md:mt-0">Crear y transformar
                     mis imágenes para Halloween 👉</span>
                 <a href="{{ route('cloudinary.generate') }}"
-                    class="flex gap-2 text-black bg-accent text-left py-1.5 px-4 md:px-3 md:py-3 rounded-full text-base  md:text-xl uppercase font-bold items-center">
+                    class="flex gap-2 text-black bg-accent hover:bg-primary hover:text-black text-left py-1.5 px-4 md:px-3 md:py-3 rounded-full text-base  md:text-xl uppercase font-bold items-center">
                     Subir
                     <svg class="size-6 text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">

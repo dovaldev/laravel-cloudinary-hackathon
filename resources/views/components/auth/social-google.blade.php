@@ -1,4 +1,4 @@
-<div class="flex flex-col justify-center items-center pt-5">
+<div  {{ $attributes->merge(['class'=> 'flex flex-col justify-center items-center pt-5']) }}>
     <a href="{{ route('google.login') }}">
         <button
             class="flex items-center bg-white dark:bg-gray-900 border border-gray-300 rounded-lg shadow-md px-6 py-2 text-sm font-medium text-gray-800 dark:text-white hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">

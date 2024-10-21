@@ -14,8 +14,8 @@
 
         <form method="POST" action="{{ route('login') }}">
             @csrf
-
-            <div>
+            <p class="w-full text-center">No tienes cuenta? <a href="{{route('register')}}">Registrate</a></p>
+            <div class="mt-5">
                 <x-label for="email" value="{{ __('Email') }}" />
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required
                     autofocus autocomplete="username" />
@@ -30,7 +30,7 @@
             <div class="block mt-4">
                 <label for="remember_me" class="flex items-center">
                     <x-checkbox id="remember_me" name="remember" />
-                    <span class="ms-2 text-sm text-gray-100">{{ __('Remember me') }}</span>
+                    <span class="ms-2 text-sm text-gray-100">{{ __('Recordarme') }}</span>
                 </label>
             </div>
 
@@ -38,18 +38,19 @@
                 @if (Route::has('password.request'))
                     <a class="underline underline-offset-4 text-sm text-gray-200 hover:text-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
                         href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
+                        {{ __('¿Olvidaste tu contraseña?') }}
                     </a>
                 @endif
 
                 <x-button class="ms-4">
-                    {{ __('Log in') }}
+                    {{ __('Iniciar Sesión') }}
                 </x-button>
 
             </div>
         </form>
         <!-- social google button -->
-        <x-auth.social-google />
+        <x-auth.social-google class="opacity-50" />
+        <p class="mt-2 text-xs text-white text-center w-full text-balance">*El registro de google está deshabilitado temporalmente</p>
 
     </x-authentication-card>
 
