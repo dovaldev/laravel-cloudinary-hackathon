@@ -1,6 +1,6 @@
 @section('seo')
-    <x-tools.seo title="Página no encontrada no se encuentra el enlace o ha caducado"
-        description="Esta es la página a la que vas cuando estás más perdido que un pulpo en un garaje o un junior que no sabe por donde empezar para ser Senior."
+    <x-tools.seo title="Licencias de Imágenes y otros recursos - profileAI.top"
+        description="Licencias de Imágenes y otros recursos utilizados en profileAI.top. En esta página encontrarás las licencias de las imágenes y otros recursos utilizados en profileAI.top."
         robots="noindex, nofollow" />
 @endsection
 @php

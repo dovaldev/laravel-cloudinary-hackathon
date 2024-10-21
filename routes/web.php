@@ -30,10 +30,6 @@ Route::get('/legal/license', function () {
     return view('pages.legal.licencia');
 })->name('legal.licencias');
 
-/** Contact */
-Route::get('/about-me', function () {
-    return view('pages.legal.licencia');
-})->name('about');
 
 /** Pricing */
 Route::get('/pricing', function () {

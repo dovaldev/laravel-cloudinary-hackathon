@@ -1,3 +1,8 @@
+@section('seo')
+    <x-tools.seo title="Imagen Spoky para Halloween - profileAI.top"
+        description="Imagen Spoky para Halloween. En esta página encontrarás una imagen Spoky para Halloween."
+        robots="noindex, follow" />
+@endsection
 <x-guest-layout class="pt-0">
     <livewire:cloudinary.delete-button-image :cloudinaryImage="$cloudinaryImage" />
     <h1 class="text-3xl font-bold text-center text-primary px-2 mb-10">Imagen original y transformada</h1>

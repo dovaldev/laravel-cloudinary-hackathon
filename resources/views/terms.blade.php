@@ -1,3 +1,8 @@
+@section('seo')
+    <x-tools.seo title="Terminos y condiciones - profileAI.top"
+        description="Términos y condiciones de profileAI.top. En esta página encontrarás los términos y condiciones de profileAI.top."
+        robots="noindex, nofollow" />
+@endsection
 <x-guest-layout>
     <div class="pt-">
         <div class="min-h-screen flex flex-col items-center pt-6 sm:pt-0">

@@ -1,3 +1,8 @@
+@section('seo')
+    <x-tools.seo title="profileAI.top - Mi galeria de imagenes transformadas"
+        description="Mi galeria de imagenes transformadas en profileAI.top. En esta página encontrarás mi galeria de imagenes transformadas."
+        robots="noindex, follow" />
+@endsection
 <x-guest-layout>
     <h1 class="text-3xl font-bold text-center text-primary px-2">Mi galeria de imagenes transformadas</h1>
     @if ($cloudinaryImages->isEmpty())

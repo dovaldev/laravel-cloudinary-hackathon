@@ -1,3 +1,9 @@
+@section('seo')
+    <x-tools.seo title="Política de Privacidad - profileAI.top"
+        description="Política de Privacidad de profileAI.top. En esta página encontrarás la política de privacidad de profileAI.top."
+        robots="noindex, nofollow" />
+@endsection
+
 <x-guest-layout>
     <div class="pt-4">
         <div class="min-h-screen flex flex-col items-center pt-6 sm:pt-0">

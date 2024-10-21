@@ -1,7 +1,7 @@
 @section('seo')
     <x-tools.seo title="profileAI.top - Crea Imagenes Spoky para Halloween"
         description="Crea imagenes Spoky para Halloween con profileAI.top. Sube tus imagenes y transformalas con la IA Generativa de Cloudinary."
-        robots="noindex, nofollow" />
+        robots="index, follow" />
 @endsection
 @section('fonts')
     <link rel="preload" href="fonts/belanosima-bold-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
