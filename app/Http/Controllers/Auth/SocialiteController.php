@@ -22,7 +22,7 @@ class SocialiteController extends Controller
         $googleUser = null;
         try {
             $googleUser = Socialite::driver('google')->user();
-            dd($googleUser);
+            //dd($googleUser);
 
             if (!$googleUser) {
                 Log::error('Error al obtener el usuario de Google: Respuesta vacía.');

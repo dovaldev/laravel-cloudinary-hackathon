@@ -82,7 +82,7 @@ Este proyecto utiliza [Laravel Sail](https://laravel.com/docs/9.x/sail) y Docker
     
     Copiar código
     
-    `./vendor/bin/sail up -d`
+    `./vendor/bin/sail up`
     
 5.  Ejecuta las migraciones y semillas:
     
@@ -99,7 +99,7 @@ Cómo contribuir 👥
 
 Las contribuciones son bienvenidas. Si tienes ideas para nuevas características, mejoras en el diseño o quieres arreglar algún bug, no dudes en hacer un fork del proyecto y enviar tu Pull Request.
 
-Licencia 📜
+Bugs por arreglar 📜
 -----------
 
-Este proyecto está licenciado bajo la MIT License.
+Parece ser que hay algun fallo entre los certificados de cloudflare y google para el registro de google.
