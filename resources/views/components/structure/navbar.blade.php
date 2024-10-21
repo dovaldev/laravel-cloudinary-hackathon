@@ -1,7 +1,7 @@
 <header class="w-full flex justify-center items-center">
     <nav class="bg-google-dark  w-full">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-            <a href="/" class="flex items-center space-x-1 rtl:space-x-reverse">
+        <div class="max-w-screen-xl flex flex-col md:flex-row md:flex-wrap items-center justify-between mx-auto p-4">
+            <a href="/" class="flex items-center space-x-1 rtl:space-x-reverse self-start md:self-auto">
                 <x-application-logo class="h-8" />
                 <div class="flex justify-center items-center">
                     <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">PROFILE</span>
@@ -10,7 +10,7 @@
             </a>
             @if (Route::has('login'))
                 @auth
-                    <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                    <div class="flex items-center  md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
                         <button type="button"
                             class="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 "
                             id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown"
@@ -58,7 +58,7 @@
                         </button>
                     </div>
                 @else
-                    <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                    <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse self-end md:self-auto">
                         <a href="{{ route('login') }}"
                             class="rounded-md px-3 py-2 text-gray-100 ring-1 ring-transparent transition hover:text-primary focus:outline-none focus-visible:ring-[#FF2D20]   ">
                             Iniciar Sesión
