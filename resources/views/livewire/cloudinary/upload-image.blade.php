@@ -253,7 +253,7 @@ new class extends Component {
                                     class="sr-only">
                             </label>
                         </div>
-                        <p class="text-xs text-gray-500">PNG, JPG, GIF hasta 1MB</p>
+                        <p class="text-xs text-gray-500">PNG, JPG, GIF hasta 5MB</p>
                     </div>
                 </div>
                 @error('image')
