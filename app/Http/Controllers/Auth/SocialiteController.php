@@ -25,7 +25,7 @@ class SocialiteController extends Controller
         Log::info('Google Callback');
         $googleUser = null;
         try {
-            $googleUser = Socialite::driver('google')->user();
+            $googleUser = Socialite::driver('google')->stateless()->user();
             //dd($googleUser);
 
             if (!$googleUser) {
