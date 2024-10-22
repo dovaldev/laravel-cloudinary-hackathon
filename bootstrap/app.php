@@ -12,7 +12,9 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        //
+        $middleware->validateCsrfTokens(except: [
+            'https://profileai.top/auth/google/callback',
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
