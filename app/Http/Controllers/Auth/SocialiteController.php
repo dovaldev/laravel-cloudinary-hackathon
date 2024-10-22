@@ -14,7 +14,9 @@ class SocialiteController extends Controller
 {
     public function redirectToGoogle()
     {
-        return Socialite::driver('google')->redirect();
+        $redirectUrl = Socialite::driver('google')->redirect()->getTargetUrl();
+        Log::info('Redirigiendo a Google: ' . $redirectUrl);
+        return redirect($redirectUrl);
     }
 
     public function handleGoogleCallback()
