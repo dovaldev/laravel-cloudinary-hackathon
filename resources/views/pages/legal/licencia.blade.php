@@ -20,7 +20,7 @@
     ]
 @endphp
 <x-guest-layout>
-    <section class="container mx-auto px-4 py-8">
+    <section class="container max-w-5xl mx-auto px-4 py-8">
         <h1 class="text-4xl font-bold text-center text-primary mb-10">Licencias de Imágenes y otros recursos</h1>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             @foreach ($licences as $license )

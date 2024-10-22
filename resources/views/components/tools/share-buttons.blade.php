@@ -1,4 +1,8 @@
 @props(['image_url'])
+@php
+    // obtener image url y convertir los espacio es blanco en %20
+    $image_url = str_replace(' ', '%20', $image_url);
+@endphp
 <section id="compartir-articulo" class="flex flex-col mt-10 min-h-10 w-full max-w-md mx-auto bg-google-decoration p-6 border border-gray-800 rounded-xl">
     <span class="text-primary-ligth text-xl font-bold text-center w-full">Compartir imagen transformada</span>
     <div class="flex justify-center items-center gap-5 mt-5">
