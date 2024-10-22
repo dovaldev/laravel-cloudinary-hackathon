@@ -123,4 +123,15 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+
+    'trusted_proxies' => [
+    'proxies' => '*',  // Para confiar en todos los proxies (puedes ajustar según tu necesidad)
+    'headers' => Illuminate\Http\Request::HEADER_X_FORWARDED_AWS_ELB |
+                 Illuminate\Http\Request::HEADER_X_FORWARDED_FOR |
+                 Illuminate\Http\Request::HEADER_X_FORWARDED_HOST |
+                 Illuminate\Http\Request::HEADER_X_FORWARDED_PORT |
+                 Illuminate\Http\Request::HEADER_X_FORWARDED_PROTO,
+],
+
+
 ];
