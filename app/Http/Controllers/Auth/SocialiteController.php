@@ -14,20 +14,21 @@ class SocialiteController extends Controller
 {
     public function redirectToGoogle()
     {
-        $redirectUrl = Socialite::driver('google')->redirect()->getTargetUrl();
+        $redirectUrl = Socialite::driver('google')->redirect();
         Log::info('Redirigiendo a Google: ' . $redirectUrl);
         return redirect($redirectUrl);
     }
 
     public function handleGoogleCallback()
     {
-        dd(request()->all());
+        // request all en log
+        Log::info('Request: ' . json_encode(request()->all()));
 
         Log::info('Google Callback');
         $googleUser = null;
 
         try {
-            $googleUser = Socialite::driver('google')->stateless()->user();
+            $googleUser = Socialite::driver('google')->user();
         } catch (\Exception $e) {
             Log::error('Error al obtener el usuario de Google: ' . $e->getMessage());
             return redirect('/login')->withErrors('No se pudo obtener los datos de Google.');
