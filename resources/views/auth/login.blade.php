@@ -47,10 +47,10 @@
                 </x-button>
 
             </div>
+            <!-- social google button -->
+            <x-auth.social-google class="opacity-50" />
+            <p class="mt-2 text-xs text-white text-center w-full text-balance">*El registro de google está deshabilitado temporalmente</p>
         </form>
-        <!-- social google button -->
-        <x-auth.social-google class="opacity-50" />
-        <p class="mt-2 text-xs text-white text-center w-full text-balance">*El registro de google está deshabilitado temporalmente</p>
 
     </x-authentication-card>
 
