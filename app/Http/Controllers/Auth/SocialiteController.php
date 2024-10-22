@@ -21,6 +21,7 @@ class SocialiteController extends Controller
 
     public function handleGoogleCallback()
     {
+        dd(request()->all());
 
         Log::info('Google Callback');
         $googleUser = null;
