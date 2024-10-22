@@ -24,8 +24,15 @@ class SocialiteController extends Controller
 
         Log::info('Google Callback');
         $googleUser = null;
+
         try {
             $googleUser = Socialite::driver('google')->stateless()->user();
+        } catch (\Exception $e) {
+            Log::error('Error al obtener el usuario de Google: ' . $e->getMessage());
+            return redirect('/login')->withErrors('No se pudo obtener los datos de Google.');
+        }
+        try {
+
             //dd($googleUser);
 
             if (!$googleUser) {
